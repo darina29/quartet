@@ -3,7 +3,7 @@ package practiceSS20HauptTerm;
 import java.util.HashMap;
 import java.util.Map;
 
-public class VehicleCard implements Valuable,SpeedCheck, Comparable<VehicleCard> {
+public class VehicleCard implements Valuable,SpeedCheck,RacingScore, Comparable<VehicleCard> {
     public enum Category {
         PRICE_EUR("Preis",1),
         CYLINDER_CAPACITY_CM3("Hubraum", 5),
@@ -208,10 +208,18 @@ public class VehicleCard implements Valuable,SpeedCheck, Comparable<VehicleCard>
 	public boolean tooFast(double limit) {
 		// TODO Auto-generated method stub
 		double toleranz= limit+(limit*5/100);
-		if( (this.getCategories().containsKey(Category.VELOCITY_KMH)) > toleranz) {
+		if( (this.getCategories().get(Category.VELOCITY_KMH)) > toleranz) {
 			return true;
 		}
 		return false;
+	}
+
+
+	@Override
+	public double calculateScore() {
+		// TODO Auto-generated method stub
+		double res= this.getCategories().get(Category.ENGINE_POWER_HP) - this.getCategories().get(Category.VELOCITY_KMH)*9;
+		return res;
 	}
 
 

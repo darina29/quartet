@@ -76,11 +76,30 @@ public class FoilVehicleCard extends VehicleCard {
 	public double getValue() {
 		// TODO Auto-generated method stub
 		
-		
-		
 		return super.getValue()/this.getName().length();
+			
+	}
+	
+	@Override
+	public boolean tooFast(double limit) {
+		// TODO Auto-generated method stub
+		double toleranz= limit+(limit*10/100);
+		if( (this.getCategories().get(Category.VELOCITY_KMH)) > toleranz) {
+			return true;
+		}
+		return false;
+	}
+	
+	
+	@Override
+	public double calculateScore() {
+		// TODO Auto-generated method stub
+		double ret= (Double) null;
+		if(this.getCategories().containsKey(Category.ENGINE_POWER_HP)) {
+			return super.getValue()*2;
+		}
 		
-		
+		return ret;
 	}
    
 	
