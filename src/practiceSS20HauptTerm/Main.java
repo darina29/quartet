@@ -12,8 +12,8 @@ public class Main {
 		//ss20
 		//haupt termin task8
 		task8();
-		task8nt();
-		task9();
+		//task8nt();
+		//task9();
 	}
 		private static void task8() {
 			
@@ -36,19 +36,19 @@ public class Main {
 			
 		}
 		
-		private static void task8nt() {
-			
-			VehicleCard peu = new VehicleCard("Peugeot Rifter", VehicleCard.newCategoriesMap(22600, 1899, 186, 7.9, 100, 8.5));
-			System.out.println(peu.tooFast(100));
-			System.out.println(peu.tooFast(95));
-			System.out.println(peu.tooFast(96));
-			
-			VehicleCard bmw = new FoilVehicleCard("BMW G11", VehicleCard.newCategoriesMap(120000, 2500, 200, 6.8, 100, 9.4),Arrays.asList(VehicleCard.Category.CONSUMPTION_L));
-			System.out.println(bmw.tooFast(100));
-			System.out.println(bmw.tooFast(90));
-			System.out.println(bmw.tooFast(91));
-			System.out.println(bmw.tooFast(95));
-			
+//		private static void task8nt() {
+//			
+//			VehicleCard peu = new VehicleCard("Peugeot Rifter", VehicleCard.newCategoriesMap(22600, 1899, 186, 7.9, 100, 8.5));
+//			System.out.println(peu.tooFast(100));
+//			System.out.println(peu.tooFast(95));
+//			System.out.println(peu.tooFast(96));
+//			
+//			VehicleCard bmw = new FoilVehicleCard("BMW G11", VehicleCard.newCategoriesMap(120000, 2500, 200, 6.8, 100, 9.4),Arrays.asList(VehicleCard.Category.CONSUMPTION_L));
+//			System.out.println(bmw.tooFast(100));
+//			System.out.println(bmw.tooFast(90));
+//			System.out.println(bmw.tooFast(91));
+//			System.out.println(bmw.tooFast(95));
+//			
 			
 			/* Erwarteter Output
 			* false
@@ -59,8 +59,8 @@ public class Main {
 			* false
 			* false
 			*/
-		}
-		
+		//}
+		/*
 		private static void task9() {
 			
 			List<VehicleCard> l = new ArrayList<>(Arrays.asList(new VehicleCard("Peugeot Rifter", VehicleCard.newCategoriesMap(22600, 1899, 186, 7.9, 205, 8.5)),
@@ -72,7 +72,7 @@ public class Main {
 	        replaceConsumption(test);
 	        test.forEach(System.out::println);
 			
-			
+			*/
 			/* Erwarteter Output
 			*  (Wenn task7 schon gelöst wurde, sieht die Ausgabe der Kategorien etwas anders aus)
 			* - BMW G11(133838) -> {Preis=120000.0, Hubraum=2500.0, Leistung=200.0, Beschleunigung=6.8, Geschwindigkeit=250.0, *Verbrauch*=9.4}
@@ -83,6 +83,6 @@ public class Main {
 		}
 		
 
-	}
+	//}
 
 

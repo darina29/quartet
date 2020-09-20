@@ -72,36 +72,16 @@ public class FoilVehicleCard extends VehicleCard {
         }
     }
     
-    @Override
+	@Override
 	public double getValue() {
-    	double sum=super.getValue();
 		// TODO Auto-generated method stub
-		return sum/super.getName().length();
+		
+		
+		
+		return super.getValue()/this.getName().length();
+		
+		
 	}
-    
-	@Override
-	public boolean tooFast(double limit) {
-		boolean help = true;
-		double proz = limit+((limit*10)/100);
-		if(this.getCategories().get(Category.VELOCITY_KMH)>proz) {
-			return true;
-		}
-		// TODO Auto-generated method stub
-		return false;
-	}
-	
-	@Override
-	public double calculateScore() {
-		// TODO Auto-generated method stub
-//		double result;
-//		if(super.getCategories().containsKey(Category.ENGINE_POWER_HP)) {
-//			return super.getValue()*10;
-//		}
-		///have done it without for loop, compared to last sem. solution????
-		if(this.specials.contains(Category.ENGINE_POWER_HP)) {
-			return super.getValue()*2;
-		}
-		return 0;
-	}
+   
 	
 }
